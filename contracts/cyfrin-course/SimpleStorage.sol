@@ -7,15 +7,16 @@ I still need to complete this^ https://github.com/Cyfrin/foundry-full-course-cu?
 */
 
 contract SimpleStorage {
-    Person[] list_of_people;
 
     struct Person {
         uint256 favourite_number;
         string name;
     }
 
-    function add_person(string memory _name, uint256 _favorite_number) public {
-        list_of_people.push(Person(_favorite_number, _name));
+    Person[] public listOfPeople;
+
+    function add_person(string memory _name, uint256 _favoriteNumber) public {
+        listOfPeople.push(Person(_favoriteNumber, _name));
     }
     
 }
