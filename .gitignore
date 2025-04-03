@@ -1,0 +1,11 @@
+# ignore remix state files
+.states/
+
+# ignore compiled artifacts
+artifacts/
+
+# ignore any local logs or temp files just in case
+*.log
+
+# ignore md files
+*.md
