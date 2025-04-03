@@ -6,6 +6,3 @@ artifacts/
 
 # ignore any local logs or temp files just in case
 *.log
-
-# ignore md files
-*.md
