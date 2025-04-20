@@ -10,6 +10,9 @@ contract Example {
     /* whenever there's a new member of my family i can push their name by calling the function addToFamily */
     myFamily[] public dynamicFamily;
 
+    // mapping name -> number
+    mapping(string => uint256) public nameToAge;
+
     // Array vs Struct
     /* struct is just a word for structure, a structure holds different types of data (uint, string, etc). arrays only hold one type of data so instead of making things more complicated you use structs and push them to arrays */
     struct myFamily {
@@ -20,6 +23,7 @@ contract Example {
     // Simple function to add to dynamicFamily array
     function addToFamily(string memory _name, uint _age) public {
         dynamicFamily.push(myFamily(_name, _age));
+        nameToAge[_name] = _age;
     }
 
 }
